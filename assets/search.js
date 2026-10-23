@@ -1,0 +1,1 @@
+const q=document.querySelector('#search');if(q){const cards=[...document.querySelectorAll('.card')];q.addEventListener('input',()=>{let n=0;const s=q.value.toLocaleLowerCase();cards.forEach(c=>{c.hidden=!c.textContent.toLocaleLowerCase().includes(s);if(!c.hidden)n++});document.querySelector('#count').textContent=n+' publications';document.querySelector('#empty').hidden=n>0;});}
